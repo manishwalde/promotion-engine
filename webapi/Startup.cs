@@ -36,6 +36,7 @@ namespace webapi
                  Configuration.GetConnectionString("DefaultConnection")));
 
          services.AddScoped<ISkuService, SkuService>();
+         services.AddScoped<IPromotionService, PromotionService>();
 
          services.AddControllers();
 

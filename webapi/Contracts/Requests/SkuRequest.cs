@@ -6,7 +6,7 @@ namespace webapi.Contracts.Requests
    {
       [Required]
       [MaxLength(1)]
-      public char SkuId { get; set; }
+      public string SkuId { get; set; }
       [Required]
       public float Price { get; set; }
    }

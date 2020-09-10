@@ -9,6 +9,7 @@ namespace webapi.Profiles
       public RequestToDomainProfiles()
       {
          CreateMap<SkuRequest, Sku>();
+         CreateMap<PromotionRequest, Promotion>();
       }
    }
 }

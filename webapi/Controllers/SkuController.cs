@@ -58,6 +58,10 @@ namespace AConnect.API.Controllers.V1
       [HttpPost]
       public async Task<IActionResult> CreateAddress([FromBody] SkuRequest request)
       {
+         if (!ModelState.IsValid)
+         {
+            return BadRequest(new { error = "" });
+         }
          var sku = _mapper.Map<Sku>(request);
 
          var created = await _skuService.CreateSkuAsync(sku);
