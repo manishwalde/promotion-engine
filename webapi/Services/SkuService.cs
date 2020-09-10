@@ -52,7 +52,7 @@ namespace webapi.Services
 
       public void UpdateSkuAsync(Sku sku)
       {
-         throw new NotImplementedException();
+         // Nothing
       }
    }
 }
