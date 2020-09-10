@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using webapi.Data;
+using webapi.Services;
 using SwaggerOptions = webapi.Options.SwaggerOptions;
 
 namespace webapi
@@ -33,8 +34,10 @@ namespace webapi
              options.UseSqlite(
                  Configuration.GetConnectionString("DefaultConnection")));
 
+         services.AddScoped<ISkuService, SkuService>();
+
          services.AddControllers();
-         
+
          services.AddSwaggerGen(x =>
          {
             x.SwaggerDoc("v1", new OpenApiInfo { Title = "promotion-engine-api", Version = "v1" });
