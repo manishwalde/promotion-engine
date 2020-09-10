@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +38,8 @@ namespace webapi
          services.AddScoped<ISkuService, SkuService>();
 
          services.AddControllers();
+
+         services.AddAutoMapper(typeof(Startup));
 
          services.AddSwaggerGen(x =>
          {

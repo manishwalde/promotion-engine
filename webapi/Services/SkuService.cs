@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using webapi.Data;
-using webapi.Domain.Sku;
+using webapi.Domain;
 
 namespace webapi.Services
 {
@@ -38,6 +38,11 @@ namespace webapi.Services
       public async Task<IEnumerable<Sku>> GetAllAsync()
       {
          return await _dataContext.Skus.ToListAsync();
+      }
+
+      public async Task<Sku> GetSkuByIdAsync(int Id)
+      {
+         return await _dataContext.Skus.SingleOrDefaultAsync(x => x.Id == Id);
       }
 
       public async Task<bool> SaveChangesAsync()

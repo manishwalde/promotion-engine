@@ -1,8 +1,7 @@
-namespace webapi.Domain
+namespace webapi.Contracts.Requests
 {
-   public class Sku
+   public class SkuRequest
    {
-      public int Id { get; set; }
       public char SkuId { get; set; }
       public float Price { get; set; }
    }

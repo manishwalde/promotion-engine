@@ -1,6 +1,6 @@
-namespace webapi.Domain
+namespace webapi.Contracts.Responses
 {
-   public class Sku
+   public class SkuResponse
    {
       public int Id { get; set; }
       public char SkuId { get; set; }
