@@ -14,5 +14,6 @@ namespace webapi.Data
       }
 
       public DbSet<Sku> Skus { get; set; }
+      public DbSet<Promotion> Promotions { get; set; }
    }
 }
